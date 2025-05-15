@@ -38,6 +38,7 @@ public class PlayerWeapon : MonoBehaviour
         PullOutGun(() => { });
     }
 
+    
     void Update()
     {
         if (isShootingDisabled)

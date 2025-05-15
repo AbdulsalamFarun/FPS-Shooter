@@ -33406,7 +33406,7 @@ MonoBehaviour:
   Hit: {fileID: 8300000, guid: e602f64fab9dc83408e59da32fcc1681, type: 3}
   Walking: {fileID: 8300000, guid: ebace59e39b4967458482de062f3d44c, type: 3}
   running: {fileID: 8300000, guid: 8452c2a44fe1b5b47b24e398f6097854, type: 3}
-  Shooting: {fileID: 8300000, guid: 1eb593aab9dbddb448dd8aeabebf1a17, type: 3}
+  Shooting: {fileID: 8300000, guid: dfa5aa302d9cbd24d9573acb26d4d269, type: 3}
 --- !u!4 &517956324
 Transform:
   m_ObjectHideFlags: 0
