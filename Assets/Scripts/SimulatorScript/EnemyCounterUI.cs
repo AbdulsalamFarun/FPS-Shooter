@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class EnemyCounterUI : MonoBehaviour
 {
     public TMP_Text enemyCountText;
-    public EndPanel endPanel;
+    
 
     void Update()
     {

@@ -26,5 +26,6 @@ public class Player1: MonoBehaviour
         verticalLookRotation -= Input.GetAxisRaw("Mouse Y") * sensitivity;
         verticalLookRotation = Mathf.Clamp(verticalLookRotation, -90f, 90f);
         cameraHolder.localEulerAngles = new Vector3(verticalLookRotation, 0, 0);
+        if (Time.timeScale == 0f) return;
     }
 }

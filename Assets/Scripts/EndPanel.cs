@@ -21,9 +21,9 @@ public class EndPanel : MonoBehaviour
 		canvasGroup.alpha = 1f;
 		canvasGroup.interactable = true;
 		canvasGroup.blocksRaycasts = true;
-
-        Time.timeScale = 0f;
-        Cursor.visible = true;
+		Cursor.visible = true;
 		Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 0f;
+        
 	}
 }

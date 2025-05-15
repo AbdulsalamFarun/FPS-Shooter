@@ -25,12 +25,12 @@ public class PlayerWeapon : MonoBehaviour
 
     private float lastTimeShot = 0f;
     private int currentRecoilIndex = 0;
+   
     
-
-    void Awake()
+    void Start()
     {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-        Debug.Log(audioManager.name);
+        
+        audioManager= AudioManager.Instance;
         playerController = GetComponent<PlayerController>();
         playerStats = GetComponent<PlayerStats>();
         equippedWeapon = new AK47();
@@ -51,7 +51,9 @@ public class PlayerWeapon : MonoBehaviour
         if (isTryingToShoot)
         {
             HandleShooting();
+            Debug.Log(" is playing" + audioManager.Shooting.name);
             audioManager.PlaySFX(audioManager.Shooting);
+            
 
         }
         else

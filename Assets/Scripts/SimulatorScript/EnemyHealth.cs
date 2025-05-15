@@ -7,7 +7,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Awake()
     {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        audioManager = AudioManager.Instance;
 
     }
     public void TakeDamage(float amount)
@@ -23,6 +23,7 @@ public class EnemyHealth : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        
         audioManager.PlaySFX(audioManager.Hit);
 
     }

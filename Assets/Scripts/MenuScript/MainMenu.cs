@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
@@ -9,22 +9,36 @@ public class MainMenu : MonoBehaviour
     public Slider sensitivitySlider;
     public TMP_InputField sensitivityInput;
 
+    public Slider volumeSlider; 
+    public AudioSource backgroundMusic; 
+
     private float sensitivity = 1f;
-    private bool isUpdating = false; // prevent feedback loop
+    private float volume = 1f;
+    private bool isUpdating = false;
 
     void Start()
     {
+        // Load Sensitivity
         sensitivity = PlayerPrefs.GetFloat("Sensitivity", 1f);
         SensitivitySettings.Sensitivity = sensitivity;
-        UpdateUI(sensitivity);
+        UpdateSensitivityUI(sensitivity);
 
+        // Load Volume
+        volume = PlayerPrefs.GetFloat("Volume", 1f);
+        if (backgroundMusic != null)
+            backgroundMusic.volume = volume;
+        if (volumeSlider != null)
+            volumeSlider.value = volume;
 
-        // Add listeners
+        // Listeners
         if (sensitivitySlider != null)
             sensitivitySlider.onValueChanged.AddListener(OnSliderChanged);
 
         if (sensitivityInput != null)
             sensitivityInput.onEndEdit.AddListener(OnInputChanged);
+
+        if (volumeSlider != null)
+            volumeSlider.onValueChanged.AddListener(OnVolumeChanged);
 
         if (settingsPanel != null)
             settingsPanel.SetActive(false);
@@ -49,7 +63,7 @@ public class MainMenu : MonoBehaviour
 
     public void ExitGame()
     {
-        Debug.Log("Exiting game...");
+        
         Application.Quit();
     }
 
@@ -81,11 +95,21 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    void UpdateUI(float value)
+    void UpdateSensitivityUI(float value)
     {
         isUpdating = true;
         sensitivitySlider.value = value;
         sensitivityInput.text = value.ToString("F2");
         isUpdating = false;
     }
+
+    void OnVolumeChanged(float value)
+    {
+        volume = value;
+        if (backgroundMusic != null)
+            backgroundMusic.volume = volume;
+
+        PlayerPrefs.SetFloat("Volume", volume);
+    }
 }
+

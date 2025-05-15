@@ -9,7 +9,7 @@ public class Target : MonoBehaviour
 	AudioManager audioManager;
     private void Awake()
     {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        audioManager = AudioManager.Instance;
     }
 
     void Start()
@@ -22,8 +22,9 @@ public class Target : MonoBehaviour
 		
 		RandomizePosition();
 		OnTargetHit?.Invoke();
-		audioManager.PlaySFX(audioManager.Hit);
-	}
+		
+        audioManager.PlaySFX(audioManager.Hit);
+    }
 
 	void RandomizePosition()
 	{
