@@ -39,9 +39,9 @@ public class AudioManager : MonoBehaviour
         sfxClips = new Dictionary<string, AudioClip>
         {
             { "Hit",Hit},
-            { "Walking", Walking },
-            { "running", running },
-            { "Shooting", Shooting },
+            { "Walking",Walking },
+            { "running",running },
+            { "Shooting",Shooting },
 
         };
     }

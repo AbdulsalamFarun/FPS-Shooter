@@ -308,7 +308,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -616,11 +616,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1212702926}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -569.5, y: -39.460022}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 265.5, y: -39.45996}
   m_SizeDelta: {x: 250, y: 81.079956}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &115659494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33402,7 +33402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 80755083}
   SFXSource: {fileID: 1825991599}
-  background: {fileID: 0}
+  background: {fileID: 8300000, guid: ab9a7b005b890c247bdaa40a6c722669, type: 3}
   Hit: {fileID: 8300000, guid: e602f64fab9dc83408e59da32fcc1681, type: 3}
   Walking: {fileID: 8300000, guid: ebace59e39b4967458482de062f3d44c, type: 3}
   running: {fileID: 8300000, guid: 8452c2a44fe1b5b47b24e398f6097854, type: 3}
@@ -34144,11 +34144,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1212702926}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -450.43716, y: -70.100006}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 486.49997, y: -70.100006}
   m_SizeDelta: {x: 46.125732, y: 50}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &725443925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35373,7 +35373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000061035156}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: -200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1136250308
@@ -35814,11 +35814,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1212702926}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 483.93713, y: -58.100006}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -453, y: -58.100006}
   m_SizeDelta: {x: 46.125732, y: 50}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1252555613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37760,7 +37760,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -88.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618219082

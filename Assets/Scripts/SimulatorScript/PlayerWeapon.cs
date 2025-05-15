@@ -52,12 +52,11 @@ public class PlayerWeapon : MonoBehaviour
         if (isTryingToShoot)
         {
             HandleShooting();
-            audioManager.PlaySFX(audioManager.Hit);
+            audioManager.PlaySFX(audioManager.Shooting);
 
         }
         else
         {
-            // Start trying to reset back to position we are not shooting anymore
             playerController.SetGunRotation(
                 Vector3.Lerp(
                     playerController.gunRotation,

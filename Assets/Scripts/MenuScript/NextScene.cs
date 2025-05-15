@@ -5,6 +5,7 @@ public class NextScene : MonoBehaviour
 {
     public void nextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1.0f;
     }
 }
