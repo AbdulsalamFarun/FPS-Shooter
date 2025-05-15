@@ -25,14 +25,12 @@ public class PlayerWeapon : MonoBehaviour
 
     private float lastTimeShot = 0f;
     private int currentRecoilIndex = 0;
-    private void Awake()
+    
+
+    void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-
-    }
-
-    void Start()
-    {
+        Debug.Log(audioManager.name);
         playerController = GetComponent<PlayerController>();
         playerStats = GetComponent<PlayerStats>();
         equippedWeapon = new AK47();
